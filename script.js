@@ -1,22 +1,28 @@
-'use strict'
+function showBox() {
+    document.getElementById("box").style.display = "block";
+  }
 
-let newX = 0;
-let newY = 0;
-startX = 0;
-startY = 0;
+   const box = document.getElementById("box");
 
-const box = document.getElementById('box');
+  let offsetX = 0;
+  let offsetY = 0;
+  let isDragging = false;
 
-card.addEventListener('mousedown', mouseDown);
+  box.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    offsetX = e.clientX - box.offsetLeft;
+    offsetY = e.clientY - box.offsetTop;
+    box.style.cursor = "grabbing";
+  });
 
-function mouseDown(e) {
-    startX = e.client
-    startY = e.clientY
-    document.addEventListener('mousemove', mouseMove)
-    document.addEventListener('mouseup', mouseUp)
-}
-function mouseMove(e) {
-    newX = e.clientX - startX;
-    newY = e.clientY - startY;
-    box.style.transform = `translate(${newX}px, ${newY}px)`;
-}
+  document.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+      box.style.left = (e.clientX - offsetX) + "px";
+      box.style.top = (e.clientY - offsetY) + "px";
+    }
+  });
+
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+    box.style.cursor = "grab";
+  });
