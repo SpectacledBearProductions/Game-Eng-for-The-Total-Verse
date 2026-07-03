@@ -1,28 +1,12 @@
-function showBox() {
-    document.getElementById("box").style.display = "block";
-  }
+function checkInput() {
+    let userinput = document.getElementById("userinput").value;
 
-   const box = document.getElementById("box");
-
-  let offsetX = 0;
-  let offsetY = 0;
-  let isDragging = false;
-
-  box.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    offsetX = e.clientX - box.offsetLeft;
-    offsetY = e.clientY - box.offsetTop;
-    box.style.cursor = "grabbing";
-  });
-
-  document.addEventListener("mousemove", (e) => {
-    if (isDragging) {
-      box.style.left = (e.clientX - offsetX) + "px";
-      box.style.top = (e.clientY - offsetY) + "px";
+    if (userinput === "Displaysky") {
+        document.getElementById("box").style.display = "block";
     }
-  });
 
-  document.addEventListener("mouseup", () => {
-    isDragging = false;
-    box.style.cursor = "grab";
-  });
+    if (userinput === "Displaygrass") {
+        document.getElementById("skybox").style.display = "block";
+    }
+}
+
