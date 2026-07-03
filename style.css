@@ -19,10 +19,9 @@
     padding: 5%;
 }
 
-h1 {
+.center-h1 {
     display: flex;
     justify-content: center;
-    padding: 2%;
 }
 
 button {
@@ -45,21 +44,34 @@ button {
     width: 1350px;
     height: 200px;
     background: rgb(14, 132, 243);
-    display: flex;
     display: none;
 }
 
 .size-the-text-box {
     position: fixed;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     cursor: pointer;
+}
+.size-button{
+    width: 49px;
+    height: 49px;
 }
 
 #skybox {
     width: 1350px;
     height: 200px;
     background: rgb(7, 252, 60);
-    display: flex;
     display: none;
+}
+
+#black {
+    width: 1350px;
+    height: 200px;
+    background: rgb(0, 0, 0);
+    display: none;
+}
+header{
+    background-color: lightgrey;
+  margin: 0;
 }
