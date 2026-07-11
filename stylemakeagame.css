@@ -1,0 +1,24 @@
+.box {
+    background-color: rgb(63, 100, 180);
+    display: flex;
+    justify-content: center;
+    padding-left: 1%;
+    width: 82rem;
+    height: 5rem;
+    padding: 1%;
+}
+.objects{
+cursor: pointer;
+}
+button{
+    width: 10rem;
+  height: 1rem;
+  font-size: 90%;
+}
+.card{
+  background-color: aquamarine;
+}
+.sidebyside {
+  display: flex;
+  flex-direction: column;
+}

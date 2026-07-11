@@ -6,12 +6,12 @@
     justify-content: center;
 }
 
-.box {
+/* .box {
     position: fixed;
     width: 100px;
     height: 100px;
     cursor: pointer;
-}
+} */
 
 .center-main-content {
     display: flex;
@@ -40,7 +40,7 @@ button {
     background-color: darkgray;
 }
 
-#box {
+/*#box {
     width: 1350px;
     height: 200px;
     background: rgb(14, 132, 243);
@@ -71,6 +71,7 @@ button {
     background: rgb(0, 0, 0);
     display: none;
 }
+    */
 header{
     background-color: lightgrey;
   margin: 0;
